@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "A document merging plugin for Mongoose",
   "main": "build/index.js",
+  "files": [
+    "build/**"
+  ],
   "scripts": {
     "build": "babel src -d build -s --ignore *.test.js",
     "test": "jest",
@@ -13,6 +16,14 @@
     "document",
     "merge"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlyonsmith/mongoose-doc-merge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jlyonsmith/mongoose-doc-merge/issues"
+  },
+  "homepage": "https://github.com/jlyonsmith/mongoose-doc-merge#readme",
   "author": "John Lyon-Smith",
   "license": "MIT",
   "devDependencies": {
