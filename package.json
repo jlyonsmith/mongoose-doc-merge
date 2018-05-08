@@ -1,0 +1,28 @@
+{
+  "name": "mongoose-doc-merge",
+  "version": "0.0.0",
+  "description": "A document merging plugin for Mongoose",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "babel src -d build -s --ignore *.test.js",
+    "test": "jest",
+    "test:debug": "babel-node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
+  },
+  "keywords": [
+    "mongoose",
+    "document",
+    "merge"
+  ],
+  "author": "John Lyon-Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "jest": "^20.0.4",
+    "mongoose": "^5.0.17"
+  },
+  "dependencies": {}
+}
