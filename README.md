@@ -4,7 +4,9 @@ This is a Mongoose plugin that adds a `merge` method to all your documents.
 
 ## `doc.merge(otherDoc)`
 
-The merge overwrites any paths in `doc` that exist in `otherDoc`.  Paths that that have a value of `undefined` are ignored, but paths that are `null`are merged.
+The merge overwrites any path values in `doc` that exist in `otherDoc`.  Path values that that have a value of `undefined` are ignored, but path values that are `null`are merged.
+
+The algorithm doesn't do anything fancy with arrays.  The new array overwrites the old one entirely.
 
 # Why?
 
