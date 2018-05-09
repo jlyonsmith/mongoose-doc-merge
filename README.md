@@ -2,9 +2,36 @@
 
 This is a Mongoose plugin that adds a `merge` method to all your documents.
 
-## `doc.merge(otherDoc)`
+## Setup
 
-The merge overwrites any path values in `doc` that exist in `otherDoc`.  Path values that that have a value of `undefined` are ignored, but path values that are `null`are merged.
+Add the module:
+
+```
+npm install mongoose-doc-merge
+```
+
+Require it:
+
+```
+import mergePlugin from 'mongoose-doc-merge'
+```
+
+Initialize it:
+
+```
+    mongoose.plugin(mergePlugin)
+```
+
+Use it:
+
+```
+let doc = new Model({...})
+let otherDoc = new Model(req.body)
+
+doc.merge(otherDoc)
+```
+
+The `merge()` method overwrites any path values in `doc` that exist in `otherDoc`.  Path values that that have a value of `undefined` are ignored, but path values that are `null`are merged.
 
 The algorithm doesn't do anything fancy with arrays.  The new array overwrites the old one entirely.
 
